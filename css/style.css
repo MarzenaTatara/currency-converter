@@ -9,8 +9,8 @@ html {
 }
 
 .element {
-    width: 300px;
-    height: 300px;
+    width: 732px;
+    height: 678px;
     background-image: url("../images/Kalkulator\ walut.png");
     resize: both;
     overflow: auto;
@@ -18,7 +18,7 @@ html {
     background-color: #ccc;
     background-repeat: repeat-x;
     background-position: bottom;
-       
+
 }
 
 .style {
@@ -26,31 +26,20 @@ html {
     background-color: #aedff657;
 }
 
-.container {
-    max-width: 700px;
+.body {
+    max-width: 850px;
     margin: 0 auto;
-    padding: 0 20px;
-}
-
-.form {
-    margin: 50px 0;
-    padding: 5px;
-    max-width: 600px;
-    border: 1px solid #00021c;
-    height: 100%;
-    background-color: #aedff6;
-    border-radius: 5px;
+    padding: 20px 20px;
 }
 
 .form__fieldset {
     border: 1px solid #110455;
-    background-color: #0863f680;
+    background-color: #aedff6;
     padding: 10px;
     margin: 10px 0;
 }
 
 .form__legend {
-    background-color: #110455;
     border-radius: 5px;
     padding: 20px;
     font-weight: 700;
@@ -75,7 +64,7 @@ html {
 .form__button {
     width: 100%;
     border: none;
-    background-color: #aedff6;
+    background-color: #110455;
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -85,11 +74,11 @@ html {
 
 .form__button:hover {
     cursor: pointer;
-    background-color: bisque;
+    background-color:#4984b4;
 }
 
 .form__button:active {
-    background-color: aquamarine;
+    background-color:#aedff6;
 }
 
 .form__result {
