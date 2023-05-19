@@ -1,33 +1,46 @@
-const formElement = document.querySelector(".js-form");
-const amountElement = document.querySelector(".js-amount");
-const currencyElement = document.querySelector(".js-currency");
-const resultElement = document.querySelector(".js-result");
-const submitElement = document.querySelector(".js-submit");
+const calculateResult = (amount, currency) => {
+    const rateEUR = 4.75;
+    const rateUSD = 4.48;
+    const rateEGP = 0.13;
 
-const rateEUR = 4.75;
-const rateUSD = 4.48;
-const rateEGP = 0.13;
+    switch (currency) {
+        case "EUR":
+            return amount * rateEUR;
 
-formElement.addEventListener("submit", (event) => {
+        case "USD":
+            return amount * rateUSD;
+
+        case "EGP":
+            return amount * rateEGP;
+    }
+};
+
+const updateResultText = (amount, result, currency) => {
+    const resultElement = document.querySelector(".js-result");
+    resultElement.innerHTML = `${amount.toFixed(2)} PLN = <strong>${result.toFixed(2)} ${currency}</strong>`;
+}
+
+const onFormSubmit = (event) => {
     event.preventDefault();
+
+
+    const amountElement = document.querySelector(".js-amount");
+    const currencyElement = document.querySelector(".js-currency");
+    const submitElement = document.querySelector(".js-submit");
 
     const amount = +amountElement.value;
     const currency = currencyElement.value;
 
-    let result;
+    const result = calculateResult(amount, currency);
 
-    switch (currency) {
-        case "EUR":
-            result = amount * rateEUR;
-            break;
+    updateResultText(amount, result, currency);
 
-        case "USD":
-            result = amount * rateUSD;
-            break;
+};
 
-        case "EGP":
-            result = amount * rateEGP;
-            break;
-    }
-    resultElement.innerHTML = `${amount.toFixed(2)} PLN = <strong>${result.toFixed(2)} ${currency}</strong>`;
-})  
+const init = () => {
+    const formElement = document.querySelector(".js-form");
+
+    formElement.addEventListener("submit", onFormSubmit);
+};
+
+init();
