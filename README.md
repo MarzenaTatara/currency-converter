@@ -3,7 +3,7 @@
 
 ## Demo
 
-![Marzena]([images/Zdjęcie do przelicznika.jpg](https://github.com/MarzenaTatara/currency-converter/blob/main/images/Zdj%C4%99cie)
+![Marzena](https://github.com/MarzenaTatara/currency-converter/blob/main/images/Zdj%C4%99cie)
 
 ## Description!
 Hi this is my currency converter. You can convert Euro, Dollar and Egyptian Pound here. The currency you will convert is fixed. It does not download changes in the exchange rate.
